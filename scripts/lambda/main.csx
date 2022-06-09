@@ -4,6 +4,8 @@
 
 
 //ESEMPIO #1: Definisco una lambda che accetta un parametro DateTime e restituisce un bool, e l'assegno alla variabile canDrive
+using System;
+
 Func<DateTime, bool> canDrive = dob => {
     return dob.AddYears(18) <= DateTime.Today;
 };
@@ -12,10 +14,10 @@ Func<DateTime, bool> canDrive = dob => {
 DateTime dob = new DateTime(2002, 12, 25);
 bool result = canDrive(dob);
 //Poi stampo il risultato bool che ha restituito
-Console.WriteLine(result);
+System.Console.WriteLine(result);
 
 //ESEMPIO #2: Stavolta definisco una lambda che accetta un parametro DateTime ma non restituisce nulla
-Action<DateTime> printDate = date => Console.WriteLine(date);
+Action<DateTime> printDate = date => System.Console.WriteLine(date);
 
 //La invoco passandole l'argomento DateTime
 DateTime date = DateTime.Today;

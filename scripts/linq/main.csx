@@ -1,6 +1,8 @@
 //Per fare il debug di questi esempi, devi prima installare il global tool dotnet-script con questo comando:
 //dotnet tool install -g dotnet-script
 //Trovi altre istruzioni nel file /scripts/readme.md
+using System;
+
 class Apple {
     public string Color { get; set; }
     public int Weight { get; set; } //In grammi
@@ -20,7 +22,7 @@ IEnumerable<int> weightsOfRedApples = apples
 
 //ESEMPIO #2: Calcolo la media dei pesi ottenuti
 double average = weightsOfRedApples.Average();
-Console.WriteLine();
+System.Console.WriteLine();
 
 //ESERCIZIO #1: Qual è il peso minimo delle 4 mele?
 //int minimumWeight = apples...;
